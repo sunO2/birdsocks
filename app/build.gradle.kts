@@ -52,7 +52,9 @@ android {
 
     namespace = "io.github.bropines.birdsocks"
     // compileSdk = 37 (не 36): core-ktx 1.17.0 требует как минимум 36
-    compileSdk = 37
+    // Local fork build: AGP 8.13.2 cannot resolve the minor-versioned API 37
+    // platform (only "37.0" is published), so this build targets API 36.
+    compileSdk = 36
     // The dependency metadata block in the APK is readable only by Google and
     // tells the user nothing; F-Droid and IzzyOnDroid ask for it to be left out.
     dependenciesInfo {
