@@ -1,0 +1,100 @@
+name: Upstream sync
+
+# Keeps this fork level with bropines/birdsocks. On a schedule (and on demand) it
+# fetches upstream, merges it into main and pushes. When the merge conflicts it
+# pushes the conflicted merge to a branch and opens a pull request, so the
+# conflict is settled by hand. The fork's own additions (the zh-rCN strings)
+# live in files upstream also edits, so a conflict is expected the day upstream
+# touches those files — that pull request is where it is resolved.
+#
+# A fork does not run scheduled workflows until they are enabled once:
+#   gh workflow enable upstream-sync.yml
+# Scheduled workflows are also switched off automatically after 60 days with no
+# repository activity; the sync's own commits keep this one active.
+
+on:
+  schedule:
+    - cron: '17 3 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: upstream-sync
+  cancel-in-progress: false
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  sync:
+    name: Merge upstream into main
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+
+      - name: Git identity
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Fetch upstream
+        run: |
+          git remote add upstream https://github.com/bropines/birdsocks.git
+          git fetch upstream --tags --prune
+
+      - name: Merge upstream/main into main
+        id: merge
+        run: |
+          git checkout main
+          if git merge-base --is-ancestor upstream/main HEAD; then
+            echo "Already up to date with upstream/main."
+            echo "state=uptodate" >> "$GITHUB_OUTPUT"
+          elif git merge --no-edit upstream/main; then
+            echo "Merged upstream/main cleanly."
+            echo "state=merged" >> "$GITHUB_OUTPUT"
+          else
+            git merge --abort
+            echo "Merge conflicts; a pull request will be opened."
+            echo "state=conflict" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Push the merge
+        if: steps.merge.outputs.state == 'merged'
+        run: |
+          git push origin main
+          git push origin --tags
+
+      - name: Open a pull request for the conflicts
+        if: steps.merge.outputs.state == 'conflict'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          branch="upstream-sync/$(date -u +%Y%m%d-%H%M%S)"
+          git checkout -b "$branch"
+          # Leave the conflict markers in the commit: they are what the PR is for.
+          git merge --no-edit upstream/main || true
+          git add -A
+          git commit -m "chore: merge upstream/main (conflicts to resolve)" || true
+          git push origin "$branch"
+          gh pr create \
+            --base main --head "$branch" \
+            --title "Sync with upstream (conflicts to resolve)" \
+            --body "The automatic upstream sync hit a merge conflict. Resolve it here — usually the zh-rCN strings and whatever upstream changed in the same file." \
+            || echo "::warning::Could not open the pull request automatically; branch $branch is pushed."
+
+      - name: Summary
+        if: always()
+        run: |
+          {
+            echo "### Upstream sync"
+            echo "- result: ${{ steps.merge.outputs.state }}"
+            echo "- fork commit: $(git rev-parse --short HEAD)"
+          } >> "$GITHUB_STEP_SUMMARY"
