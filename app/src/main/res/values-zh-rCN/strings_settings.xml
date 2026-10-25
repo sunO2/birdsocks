@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Settings: the hub's sections and what moved into them. -->
+<resources>
+    <!-- The hub -->
+    <string name="settings_cat_appearance">外观和语言</string>
+    <string name="settings_cat_appearance_desc">主题、颜色、应用语言</string>
+    <string name="settings_cat_account">账户和设备</string>
+    <string name="settings_cat_account_desc">账户、设备名称、服务器、会话、网络</string>
+    <string name="settings_cat_tunnel">隧道模式</string>
+    <string name="settings_cat_tunnel_desc">为无法使用代理的应用提供 VPN 接口</string>
+    <string name="settings_cat_proxies">本地代理</string>
+    <string name="settings_cat_proxies_desc">SOCKS5 地址和密码、在本地网络上共享</string>
+    <string name="settings_cat_dns_desc">NetBird DNS、额外名称、DNS 代理</string>
+    <string name="settings_cat_access">对此手机的访问</string>
+    <string name="settings_cat_access_desc">来自对等节点的连接、发布端口</string>
+    <string name="settings_cat_connection">连接</string>
+    <string name="settings_cat_connection_desc">惰性连接、中继、IPv6、MTU</string>
+    <string name="settings_cat_background">后台和权限</string>
+    <string name="settings_cat_background_desc">通知、开机启动、权限</string>
+    <string name="settings_cat_diagnostics">诊断和开发者</string>
+    <string name="settings_cat_diagnostics_desc">日志详细程度、环境、远程任务、日志</string>
+    <string name="settings_cat_about_desc">版本、更新、文档、许可证</string>
+
+    <!-- How a group of settings applies -->
+    <string name="settings_note_restart">BirdSocks 重启后生效</string>
+    <string name="settings_note_reconnect">保存在 NetBird 配置文件中：更改会重新连接</string>
+
+    <!-- Cards -->
+    <string name="settings_card_account">账户</string>
+    <string name="settings_card_network">网络</string>
+    <string name="settings_sect_lan">本地网络</string>
+    <string name="settings_card_inbound">到此手机的连接</string>
+    <string name="settings_card_peers">对等节点和中继</string>
+    <string name="settings_card_packets">地址和数据包</string>
+    <string name="settings_card_server_connection">服务器连接</string>
+    <string name="cp_desc">BirdSocks 如何连接到 NetBird 服务器：管理、信令和中继。服务器被封锁时，可通过代理，或让 ByeDPI 让 TLS 握手绕过 DPI。对等节点之间的流量仍走自己的路径。</string>
+    <string name="cp_mode_direct">直连</string>
+    <string name="cp_mode_proxy">代理</string>
+    <string name="cp_host">代理服务器</string>
+    <string name="cp_port">端口</string>
+    <string name="cp_bad_port">端口为 1 到 65535</string>
+    <string name="cp_user">用户名</string>
+    <string name="cp_pass">密码</string>
+    <string name="cp_auth_desc">仅在代理要求时填写。</string>
+    <string name="cp_no_host">未设置代理服务器：连接将直连。</string>
+    <string name="cp_byedpi_flags">ByeDPI 参数</string>
+    <string name="cp_byedpi_flags_desc">byedpi 语法中的去同步选项。会 bind、fork 或访问文件的选项会被丢弃。</string>
+    <string name="cp_byedpi_ipv4">仅 IPv4</string>
+    <string name="cp_byedpi_ipv4_desc">用于服务器的 IPv6 地址失效的网络。</string>
+    <string name="cp_byedpi_running">ByeDPI 正在监听 %1$s</string>
+    <string name="settings_card_developer">开发者</string>
+    <string name="settings_sect_tools">工具</string>
+
+    <!-- Account -->
+    <string name="settings_account_hint">切换、添加、重命名或删除</string>
+
+    <!-- Local proxies -->
+    <string name="settings_socks5_auth_needs_both">请都填写：只填一个会被忽略，代理将保持开放</string>
+    <string name="settings_sagernet_copy">复制 socks5:// 链接</string>
+    <string name="settings_sagernet_copied">链接已复制</string>
+    <string name="settings_sagernet_copy_for">用于…上的客户端的链接</string>
+    <string name="settings_sagernet_copy_local">此手机</string>
+    <string name="settings_lan_access_listening">正在监听所有接口：地址如下</string>
+    <string name="settings_lan_endpoint_lan">Wi‑Fi / LAN</string>
+    <string name="settings_lan_endpoint_none">此网络当前没有地址</string>
+    <string name="settings_lan_copied">已复制：%1$s</string>
+    <string name="settings_lan_access_no_auth_warning">SOCKS5 代理没有用户名和密码：此 Wi‑Fi 上的任何人都能通过它访问你的 NetBird 网络。</string>
+
+    <!-- DNS, access, diagnostics -->
+    <string name="settings_link_dns_desc">解析器、名称和查询测试</string>
+    <string name="settings_inbound_override">阻止入站优先：开启后，无论“对此手机的访问”如何设置，对等节点都访问不到此手机上的任何东西。</string>
+    <string name="settings_link_publish_desc">为此手机的一个端口提供公共地址</string>
+    <string name="settings_link_diagnostics_desc">连接、事件、访问检查、抓包</string>
+    <string name="settings_link_logs_desc">守护进程的日志，支持筛选和导出</string>
+</resources>

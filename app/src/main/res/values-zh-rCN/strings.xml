@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="status_stopped">已停止</string>
+    <string name="tap_to_start">点击启动</string>
+
+    <string name="logs_title">日志</string>
+    <string name="logs_copied">日志已复制到剪贴板</string>
+
+    <string name="action_cancel">取消</string>
+    <string name="action_save">保存</string>
+    <string name="action_close">关闭</string>
+    <string name="action_clear">清除</string>
+    <string name="action_generate">生成</string>
+    <string name="action_copy">复制</string>
+    <string name="action_back">返回</string>
+
+    <string name="copied_to_clipboard">%1$s 已复制到剪贴板！</string>
+    <string name="error_generic">错误：%1$s</string>
+
+    <string name="settings_amoled_black_desc">深色模式下使用纯黑背景</string>
+    <string name="settings_field_example">示例：%1$s</string>
+
+    <string name="logs_saved">日志已保存</string>
+    <string name="logs_cleared">已清除</string>
+    <string name="logs_copied_tail">日志过大：仅复制了末尾部分。使用“保存”导出完整日志</string>
+    <string name="logs_root_clear_failed">无法清除守护进程日志（root shell 失败）</string>
+    <string name="logs_search_placeholder">搜索…</string>
+    <string name="logs_cd_jump_to_end">跳转到末尾</string>
+    <string name="logs_cd_logcat">包含应用的 logcat</string>
+    <string name="logs_expand_more">… 展开（还有 %1$d 行）</string>
+    <string name="logs_collapse">… 收起</string>
+    <string name="logs_day_today">今天</string>
+    <string name="logs_day_yesterday">昨天</string>
+    <string name="logs_clear_app">应用日志</string>
+    <string name="logs_clear_daemon">守护进程日志</string>
+    <string name="logs_clear_all">全部</string>
+
+    <string name="main_status_active">已激活</string>
+    <string name="main_status_starting">正在启动…</string>
+    <string name="main_status_please_wait">请稍候…</string>
+    <string name="main_status_starting_desc">正在唤醒守护进程…</string>
+    <string name="menu_settings">设置</string>
+
+    <string name="settings_sect_personalization">个性化</string>
+    <string name="settings_theme_system">跟随系统</string>
+    <string name="settings_theme_light">浅色</string>
+    <string name="settings_theme_dark">深色</string>
+    <string name="settings_theme_title">界面主题</string>
+    <string name="settings_lang_title">应用语言</string>
+    <string name="settings_lang_sys">系统</string>
+    <string name="settings_lang_en">English</string>
+    <string name="settings_lang_ru">Русский</string>
+    <string name="settings_lang_zh">简体中文</string>
+    <string name="settings_preset_default">默认</string>
+    <string name="settings_preset_lavender">薰衣草</string>
+    <string name="settings_preset_emerald">翡翠</string>
+    <string name="settings_preset_sapphire">蓝宝石</string>
+    <string name="settings_preset_amber">琥珀</string>
+    <string name="settings_preset_monochrome">单色</string>
+    <string name="settings_preset_tokionight">TokioNight</string>
+    <string name="settings_palette_title">调色板</string>
+    <string name="settings_dynamic_color_title">动态取色</string>
+    <string name="settings_dynamic_color_desc">使用 Material You 系统颜色</string>
+    <string name="settings_amoled_black_title">AMOLED 黑色</string>
+
+    <string name="settings_not_set">未设置</string>
+
+    <string name="settings_copy_cd_format">复制 %1$s</string>
+    <string name="perm_ask_title">已在后台停止</string>
+    <string name="perm_ask_text">系统停止了 BirdSocks 并阻止其重新启动。允许自启动，这样更新或内存清理就不会再断开连接。</string>
+    <string name="perm_ask_grant">允许</string>
+    <string name="perm_ask_later">稍后</string>
+    <string name="perm_ask_never">不再询问</string>
+    <string name="perm_ask_all">所有权限</string>
+    <string name="perm_title">权限</string>
+    <string name="perm_intro">均为可选。每一项都能让连接更稳定。</string>
+    <string name="perm_open">打开</string>
+    <string name="perm_open_failed">无法在此设备上打开该屏幕</string>
+    <string name="perm_state_granted">已授予</string>
+    <string name="perm_state_denied">未授予</string>
+    <string name="perm_state_unknown">未知 — Android 不会报告</string>
+    <string name="perm_state_na">此 Android 版本不需要</string>
+    <string name="perm_autostart_title">自启动</string>
+    <string name="perm_autostart_reason">让应用在系统终止后能够恢复</string>
+    <string name="perm_alarms_title">闹钟 &amp; 提醒</string>
+    <string name="perm_alarms_reason">让 15 分钟检查按时重启服务</string>
+    <string name="perm_battery_title">电池优化</string>
+    <string name="perm_battery_reason">熄屏时保持连接存活</string>
+    <string name="perm_notifications_title">通知</string>
+    <string name="perm_notifications_reason">显示连接状态并在断开时发出警告</string>
+    <string name="perm_install_title">安装未知应用</string>
+    <string name="perm_install_reason">用于安装应用内下载的更新</string>
+    <string name="main_status_connecting">正在连接</string>
+    <string name="main_status_needs_login">需要登录</string>
+    <string name="main_status_state_on">开启</string>
+    <string name="main_status_state_off">关闭</string>
+    <string name="main_status_action_stop">停止</string>
+    <string name="main_status_action_start">启动</string>
+    <string name="help_expand">显示更多</string>
+    <string name="help_collapse">显示更少</string>
+</resources>

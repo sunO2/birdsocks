@@ -62,7 +62,8 @@ internal fun AppearanceSection(a: Appearance) {
         val langs = listOf(
             "sys" to stringResource(R.string.settings_lang_sys),
             "en" to stringResource(R.string.settings_lang_en),
-            "ru" to stringResource(R.string.settings_lang_ru)
+            "ru" to stringResource(R.string.settings_lang_ru),
+            "zh-CN" to stringResource(R.string.settings_lang_zh)
         )
         Spacer(Modifier.height(12.dp))
         Text(stringResource(R.string.settings_lang_title), style = MaterialTheme.typography.bodyMedium, fontWeight = FontWeight.SemiBold, color = MaterialTheme.colorScheme.onSurfaceVariant)

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nb_menu_dns">DNS</string>
+    <string name="nb_menu_diagnostics">诊断</string>
+    <string name="state_stopped_title">BirdSocks 已停止</string>
+</resources>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The VPN (TUN) mode: TunVpnService, its settings, its permission and its app list. -->
+<resources>
+    <string name="title_activity_tun_excluded_apps">排除的应用</string>
+    <string name="tun_apps_filter_all">全部</string>
+    <string name="tun_apps_filter_excluded">已绕过</string>
+    <string name="tun_excluded_apps_count">绕过隧道：%1$d</string>
+    <string name="nb_tun_apps_empty">暂无内容</string>
+    <string name="tun_excluded_apps_not_installed">未在此手机上安装</string>
+
+    <string name="nb_tun_mode_proxy">代理</string>
+    <string name="nb_tun_mode_vpn">VPN (TUN)</string>
+    <string name="nb_tun_mode_title">模式</string>
+    <string name="nb_tun_mode_proxy_desc">应用通过其内设置的 SOCKS5 代理（或 DNS 代理）访问 NetBird。VPN 槽位保持空闲。</string>
+    <string name="nb_tun_mode_vpn_desc">所有应用都通过 Android 的 VPN 经过 BirdSocks，无需在应用中设置。会占用 VPN 槽位。</string>
+    <string name="nb_tun_card">VPN</string>
+    <string name="nb_tun_status_up">隧道已启动 · %1$s</string>
+    <string name="nb_tun_status_waiting">随 NetBird 启动</string>
+    <string name="nb_tun_status_consent">正在等待 VPN 权限</string>
+    <string name="nb_tun_routes_split">仅 NetBird 网段</string>
+    <string name="nb_tun_routes_all">全部流量 (%1$s)</string>
+    <string name="nb_tun_reason_exit">出口节点</string>
+    <string name="nb_tun_reason_domain">域名路由</string>
+    <string name="nb_tun_reason_all">由设置决定</string>
+    <string name="nb_tun_help">应用的流量进入 SOCKS5 代理（%1$s）并从那里继续：NetBird 的网段经过 mesh，其余直连。隧道内无 ping。\n• DNS：BirdSocks 内有一个解析器 — 先解析 NetBird 的名称，然后是 DNS 上游或网络的解析器。\n• 将私人 DNS 设置为主机名会绕过它：NetBird 名称将无法解析。\n• 每当 NetBird 的守护进程停止，VPN 也会停止。</string>
+    <string name="nb_tun_engine_native">原生</string>
+    <string name="nb_tun_engine_socks">通过代理</string>
+    <string name="nb_tun_engine_native_desc">隧道使用此设备的 NetBird 地址：应用以手机本身的身份访问对等节点，ping 可用，对等节点用自己的地址访问手机上的应用（KDE Connect、文件共享）。来自对等节点的新连接需要“对此手机的访问”。</string>
+    <string name="nb_tun_engine_socks_desc">隧道使用自己的地址，接入 SOCKS5 代理。对等节点只能通过“对此手机的访问”访问手机上的应用，应用看到它们的地址是 127.0.0.1。</string>
+    <string name="nb_tun_help_native">应用发往 NetBird 的数据包原样进入 mesh；其余从 BirdSocks 直接发出。\n• DNS：BirdSocks 内有一个解析器 — 先解析 NetBird 的名称，然后是 DNS 上游或网络的解析器。\n• 将私人 DNS 设置为主机名会绕过它：NetBird 名称将无法解析。\n• 一旦 NetBird 为此设备分配了地址，隧道就会启动；每当 NetBird 的守护进程停止，隧道也会停止。</string>
+    <string name="nb_tun_route_all_title">路由所有流量</string>
+    <string name="nb_tun_route_all_desc">将每个应用的流量都导入隧道，而不只是 NetBird 的网段。选定的出口节点或域名路由会自动这样做。</string>
+    <string name="nb_tun_ipv6_title">路由所有 IPv6</string>
+    <string name="nb_tun_ipv6_desc">当隧道接管所有流量时，IPv6 也会被导入。NetBird 自己的 IPv6 始终如此。\n• 仅当你的出口节点支持 IPv6 时才开启。\n• 否则 IPv6 网站会卡住，而不会回退到 IPv4。</string>
+    <string name="nb_tun_apps_title">排除的应用</string>
+    <string name="nb_tun_apps_desc">%1$d 个绕过隧道；BirdSocks 本身始终如此。启用始终开启的 VPN 和\"阻止无 VPN 的连接\"时，被排除的应用会失去网络。</string>
+    <string name="nb_tun_cidrs_title">排除的网段</string>
+    <string name="nb_tun_cidrs_desc">当隧道接管所有流量时，用逗号分隔的、不经过隧道的子网。Android 13+。很少需要：代理本来就会让本地网络直连。</string>
+    <string name="nb_tun_cidrs_hint">192.168.0.0/16</string>
+    <string name="nb_tun_address_title">VPN 地址</string>
+    <string name="nb_tun_address_desc">隧道接口的 IPv4 地址及其前缀。仅当 198.18.0.1 与某些东西冲突时才更改。</string>
+    <string name="nb_tun_address_invalid">不是带前缀的 IPv4 地址：%1$s</string>
+    <string name="nb_tun_warning_title">要占用 VPN 槽位吗？</string>
+    <string name="nb_tun_warning_body">Android 一次只运行一个 VPN。开启此项会占用该槽位，之后占用它的 VPN 或广告拦截器也会以同样方式断开 BirdSocks。</string>
+    <string name="nb_tun_warning_body_busy">另一个 VPN 正在运行 — 广告拦截器、DNS 应用或另一个隧道。开启此项会从它那里夺取槽位，它会停止，直到你切换回来。</string>
+    <string name="nb_tun_warning_confirm">开启</string>
+    <string name="nb_tun_denied">未授予 VPN 权限</string>
+    <string name="nb_tun_unavailable">隧道库未在此设备上加载。</string>
+    <string name="nb_tun_channel">VPN</string>
+    <string name="nb_tun_consent_title">需要 VPN 权限</string>
+    <string name="nb_tun_consent_text">点按以允许 BirdSocks 启动其 VPN。</string>
+    <string name="nb_tun_revoked_text">另一个 VPN 占用了槽位。BirdSocks 将继续以代理方式运行。</string>
+    <string name="nb_tun_notif_text">%1$s · VPN</string>
+    <string name="nb_tun_tile_active">已激活 · VPN</string>
+</resources>

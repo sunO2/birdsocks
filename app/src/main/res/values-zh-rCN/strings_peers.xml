@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  对等节点界面：列表、本设备自身所在行，以及可翻页查看的详情面板。
+  其余与对等节点相关的词条（筛选、ICE、延迟）较旧，位于 strings_birdsocks.xml。
+-->
+<resources>
+
+    <!-- 列表。 -->
+    <string name="state_peers_alone">此网络中还没有其他对等节点</string>
+    <string name="peer_state_connected">已连接</string>
+    <string name="peer_state_connecting">正在连接</string>
+    <string name="peer_state_idle">空闲</string>
+    <!-- 守护进程既未连接也不在连接时，本设备的状态。 -->
+    <string name="peer_state_down">未连接</string>
+    <string name="peer_role_routing">路由对等节点</string>
+    <string name="peer_self">此设备</string>
+
+    <!-- 面板：翻页、折叠卡片、复制行。 -->
+    <string name="peer_details_prev">上一个</string>
+    <string name="peer_details_next">下一个</string>
+    <string name="peer_copied">已复制</string>
+    <string name="peer_cd_expanded">已展开</string>
+    <string name="peer_cd_collapsed">已折叠</string>
+
+    <!-- 卡片标题。 -->
+    <string name="peer_group_connection">连接</string>
+    <string name="peer_group_addresses">地址</string>
+    <string name="peer_group_path">路径</string>
+    <string name="peer_group_traffic">流量</string>
+    <string name="peer_group_networks">网络</string>
+    <string name="peer_group_security">安全</string>
+    <string name="peer_group_dns">DNS</string>
+
+    <!-- 连接卡片中延迟下方的说明，或在无延迟时的短横线下方。 -->
+    <string name="peer_conn_not_measured">尚未测量</string>
+    <string name="peer_conn_not_connected">当前无连接</string>
+    <string name="peer_conn_lazy">首次使用时连接</string>
+
+    <!-- 路径卡片的各行。 -->
+    <string name="peer_local_endpoint">此设备的端点</string>
+    <string name="peer_remote_endpoint">对等节点的端点</string>
+    <string name="peer_status_changed">状态已更改</string>
+
+    <string name="peer_traffic_total">已传输</string>
+    <string name="peer_traffic_rx">已接收</string>
+    <string name="peer_traffic_tx">已发送</string>
+
+    <!-- 网络卡片：一个网段时原样显示，多个时计数。 -->
+    <string name="peer_networks_one">由其路由的网络</string>
+    <string name="peer_networks_many">由其路由的网络</string>
+    <plurals name="peer_networks_count">
+        <item quantity="one">%d 个网络</item>
+        <item quantity="other">%d 个网络</item>
+    </plurals>
+
+    <string name="peer_rosenpass_caption">后量子密钥（Rosenpass）</string>
+    <string name="peer_rosenpass_permissive">开启，宽松模式</string>
+    <string name="peer_ssh_session">SSH 会话</string>
+
+    <!-- 本设备的会话与 DNS 卡片。 -->
+    <string name="peer_session_never">不会过期</string>
+    <string name="peer_dns_labels">额外 DNS 名称</string>
+    <string name="peer_dns_labels_edit">在设置中更改</string>
+</resources>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The launcher icon: its row and picker in Settings → Appearance, and the icons' names (core/AppIcons.kt). -->
+<resources>
+    <string name="icon_title">应用图标</string>
+    <string name="icon_note">启动器可能需要几秒钟才能显示新图标。旧图标的主屏幕图标或固定快捷方式可能会消失：请重新添加。</string>
+
+    <!-- The picker's sections. -->
+    <string name="icon_group_birdsocks">BirdSocks</string>
+    <string name="icon_group_netbird_orange">NetBird：橙色背景</string>
+    <string name="icon_group_netbird_bird">NetBird：橙色小鸟</string>
+
+    <!-- After an icon's name, for TalkBack: which colour set it is. -->
+    <string name="icon_style_bs">BirdSocks 配色</string>
+    <string name="icon_style_r4orange">橙色背景</string>
+    <string name="icon_style_r4dark">橙色背景，深色版本</string>
+    <string name="icon_style_r5light">橙色小鸟，浅色</string>
+    <string name="icon_style_r5dark">橙色小鸟，深色</string>
+</resources>

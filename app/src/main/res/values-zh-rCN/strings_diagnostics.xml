@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="diag_tools">工具</string>
+    <string name="diag_tool_logs_desc">本应用和 NetBird 的日志：可搜索、复制、保存。</string>
+    <string name="diag_tool_trace_desc">NetBird 防火墙会如何处理本手机与某对等节点之间的数据包。</string>
+    <string name="diag_forwarding_desc">网络作为路由对等节点转发到本设备的端口。规则在服务器上设置。</string>
+
+    <string name="dns_test">测试</string>
+    <string name="dns_proxy_test_desc">向代理查询本设备自身的名称：有应答说明 NetBird 的解析器在其后端。</string>
+    <string name="dns_proxy_off_title">DNS 代理已关闭</string>
+    <string name="dns_proxy_off_desc">在 设置 → DNS 中开启它，可将 AdGuard 或其他应用的 DNS 指向 NetBird。</string>
+    <string name="dns_lookup_title">查询</string>
+    <string name="dns_lookup_desc">像指向它的应用那样向 DNS 代理查询。</string>
+    <string name="dns_lookup_placeholder">peer.netbird.cloud or example.com</string>
+    <string name="dns_cd_query">查询</string>
+    <string name="dns_answered">已在 %1$d 毫秒内应答</string>
+    <string name="dns_answered_with">已在 %1$d 毫秒内应答：%2$s</string>
+    <string name="dns_no_answer">无应答：%1$s</string>
+    <string name="dns_timeout">超时</string>
+    <string name="dns_rcode_nxdomain">无此名称</string>
+    <string name="dns_rcode_nodata">无记录</string>
+    <string name="dns_rcode_servfail">服务器故障</string>
+    <string name="dns_rcode_refused">已拒绝</string>
+    <string name="dns_rcode_other">错误 %1$d</string>
+    <string name="dns_state">状态</string>
+    <string name="dns_netbird_off_desc">对等节点名称和网络区域无法在本设备上解析。请在 设置 → DNS 中开启 NetBird DNS。</string>
+    <string name="dns_device_name">本设备</string>
+    <string name="dns_domain">网络域名</string>
+    <string name="dns_settings_link">DNS 设置</string>
+    <string name="dns_settings_link_desc">NetBird DNS、额外名称、DNS 代理以及其他名称的去向。</string>
+    <string name="dns_records_title">记录</string>
+    <string name="dns_records_desc">服务器为本设备提供的名称：其对等节点区域以及管理员为其组创建的区域。点击名称即可复制。完整表格位于仪表盘上。</string>
+    <string name="dns_records_none">服务器未为本设备提供任何记录。</string>
+    <string name="dns_records_not_connected">NetBird 连接后记录才会到达。</string>
+    <string name="dns_records_filter">按名称或地址筛选</string>
+    <string name="dns_zone_peers">对等节点</string>
+    <string name="dns_zone_custom">自定义区域</string>
+    <string name="dns_zone_no_search">无短名称</string>
+    <plurals name="dns_zone_names">
+        <item quantity="one">%d 个名称</item>
+        <item quantity="other">%d 个名称</item>
+    </plurals>
+    <string name="dns_servers_title">域名服务器</string>
+    <string name="dns_servers_desc">按网络设置所述，NetBird 按域名将名称发送到何处。测试会通过 SOCKS5 代理像应用那样访问服务器：当某对等节点路由其地址时，经由网格。</string>
+    <string name="dns_servers_none">网络未为本设备提供任何域名服务器。</string>
+    <string name="dns_group_off">未使用</string>
+    <string name="dns_cd_test_server">测试服务器</string>
+</resources>

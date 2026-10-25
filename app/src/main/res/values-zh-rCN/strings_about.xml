@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- About -->
+    <string name="about_open">关于 BirdSocks</string>
+    <string name="about_open_desc">更新内容、鸣谢与许可证</string>
+    <string name="about_cd_update">关于 BirdSocks：有可用更新</string>
+    <string name="about_version">版本 %1$s</string>
+    <string name="about_core_version">NetBird %1$s</string>
+    <string name="about_whats_new">更新内容</string>
+    <string name="about_releases">发布版本</string>
+    <string name="about_docs">NetBird 文档</string>
+    <string name="about_donate">支持本项目</string>
+    <string name="about_credits">鸣谢</string>
+    <string name="about_credit_claude">Claude（Anthropic 出品）— 开发</string>
+    <string name="about_credit_bropines">Bropines — 创意、方向与测试</string>
+    <string name="about_credit_netbird">NetBird — 核心客户端</string>
+    <string name="about_credit_hev">hev-socks5-tunnel — VPN 模式</string>
+    <string name="about_credit_byedpi">ByeDPI — 绕过对服务器封锁的方式</string>
+    <string name="about_credit_anet">anet — Android 11+ 上的网络接口</string>
+    <string name="about_license_line">BirdSocks 是遵循 BSD 3-Clause 许可证的自由软件。</string>
+
+    <!-- What's new -->
+    <string name="whats_new_title">%1$s 的更新内容</string>
+    <string name="whats_new_unavailable">更新日志不可用。</string>
+    <string name="whats_new_full">完整更新日志</string>
+
+    <!-- Updates -->
+    <string name="update_check_on_launch">自动检查更新</string>
+    <string name="update_check_on_launch_desc">每次打开 BirdSocks 时向 GitHub 查询是否有更新的版本，并在有更新时提示。在您点击下载之前不会下载任何内容。</string>
+    <string name="update_check_now">检查更新</string>
+    <string name="update_check_now_desc">立即向 GitHub 查询；可从“关于”中下载并安装更新的版本</string>
+    <string name="update_checking">正在检查…</string>
+    <string name="update_up_to_date">您已是最新版本</string>
+    <string name="update_new_version">版本 %1$s 可用</string>
+    <string name="update_available_toast">BirdSocks %1$s 可用：请查看主屏幕上的“关于”</string>
+    <string name="update_notes">发布说明</string>
+    <string name="update_download">下载并安装</string>
+    <string name="update_install">安装</string>
+    <string name="update_downloading">正在下载… %1$d%%</string>
+    <string name="update_verify_desc">适用于本设备的 APK 会从发布版本中下载，与其 SHA256SUMS 校验后交给 Android 的安装程序，安装程序在替换此版本前会询问。</string>
+    <string name="update_dev_build">这是开发版本，属于独立应用：正式版会安装在其旁边，而非覆盖它。请从发布页面获取。</string>
+    <string name="update_no_apk">该发布版本没有适用于本设备的 APK。请从发布页面获取。</string>
+    <string name="update_open_page">打开发布页面</string>
+    <string name="update_retry">重试</string>
+    <string name="update_grant_permission">允许 BirdSocks 安装应用，然后点击安装</string>
+    <string name="update_install_failed">安装程序失败：%1$s</string>
+    <string name="update_failed_check">无法检查更新</string>
+    <string name="update_failed_download">下载失败</string>
+    <string name="update_failed_no_sums">该发布版本没有此 APK 的校验和</string>
+    <string name="update_failed_checksum">下载内容与发布版本的校验和不匹配，已被删除</string>
+    <string name="update_failed_not_apk">下载内容不是 BirdSocks APK</string>
+    <string name="update_failed_not_newer">下载内容不比当前版本新</string>
+</resources>

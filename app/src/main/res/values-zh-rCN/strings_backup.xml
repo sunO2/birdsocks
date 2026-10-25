@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 设置 → 备份：将 BirdSocks 的设置和 NetBird 的账户导出到文件，并可导入。 -->
+<resources>
+    <!-- 中心页 -->
+    <string name="settings_cat_backup">备份</string>
+    <string name="settings_cat_backup_desc">将设置和账户导出到文件，并可导入</string>
+
+    <!-- 保存 -->
+    <string name="backup_card_save">备份</string>
+    <string name="backup_settings_title">设置文件</string>
+    <string name="backup_settings_desc">将 BirdSocks 的设置保存为纯 JSON 文件，适用于此手机或其他手机。密码、NetBird 账户和此设备的名称不会包含在内：恢复后需重新输入代理密码并登录。</string>
+    <string name="backup_full_title">完整备份</string>
+    <string name="backup_full_desc">将设置及其密码、NetBird 账户及其密钥保存到一个用密码锁定的文件中。用于重装后恢复到此手机。</string>
+    <string name="backup_saved">备份已保存</string>
+    <string name="backup_save_failed">备份未保存：%1$s</string>
+
+    <!-- 恢复 -->
+    <string name="backup_card_restore">恢复</string>
+    <string name="backup_restore_title">从文件恢复</string>
+    <string name="backup_restore_desc">设置文件或完整备份。在你确认要恢复的内容之前，不会有任何更改。</string>
+    <string name="backup_restored">已恢复</string>
+    <string name="backup_restore_failed">未恢复：%1$s</string>
+
+    <!-- 密码 -->
+    <string name="backup_password_title">备份密码</string>
+    <string name="backup_password_text">该文件将保存你的 NetBird 账户密钥和密码，并用此密码加密。此密码无法找回：没有它就无法恢复备份。</string>
+    <string name="backup_password_label">密码</string>
+    <string name="backup_password_repeat">再次输入密码</string>
+    <string name="backup_password_mismatch">两次输入的密码不一致</string>
+    <string name="backup_password_show">显示密码</string>
+    <string name="backup_password_continue">选择保存位置</string>
+    <string name="backup_password_lost">在选择文件时密码丢失。请重新开始备份。</string>
+    <string name="backup_unlock_title">完整备份</string>
+    <string name="backup_unlock_text">输入保存该备份时使用的密码。</string>
+    <string name="backup_unlock_action">打开</string>
+    <string name="backup_wrong_password">密码错误，或文件已损坏</string>
+
+    <!-- 要恢复的内容 -->
+    <string name="backup_from">来自 %1$s，BirdSocks %2$s</string>
+    <string name="backup_settings_confirm_title">恢复设置？</string>
+    <string name="backup_settings_confirm_text">%1$s。\n\n文件中的设置将替换此处的设置。密码、NetBird 账户和此设备的名称不在其中，保持不变。当此处的代理没有密码时，本地网络上的代理共享将保持关闭。</string>
+    <string name="backup_restore_action">恢复</string>
+    <string name="backup_scope_title">要恢复的内容</string>
+    <string name="backup_scope_text">%1$s。其中的 NetBird 账户：%2$d 个。</string>
+    <string name="backup_scope_settings">仅设置</string>
+    <string name="backup_scope_settings_desc">设置及其密码。此处的 NetBird 账户保持不变。</string>
+    <string name="backup_scope_everything">全部</string>
+    <string name="backup_scope_everything_desc">还包括 NetBird 账户及其密钥（替换此处的账户）以及此设备的名称。写入期间 NetBird 会停止，随后重新启动。</string>
+    <string name="backup_scope_warning">在另一台手机上恢复 NetBird 密钥会使两台设备共用一个身份。请在同一台手机上使用（重装后），或在新手机上重新登录。</string>
+
+    <!-- 文件被拒绝的原因；它们接在“未恢复：”之后 -->
+    <string name="backup_err_not_backup">这不是 BirdSocks 备份</string>
+    <string name="backup_err_other_app">该备份属于另一个应用（%1$s）</string>
+    <string name="backup_err_format_new">该备份由更新版本的 BirdSocks 创建；请先更新应用</string>
+    <string name="backup_err_app_new">该备份由 BirdSocks %1$s 创建，版本高于当前版本；请先更新应用</string>
+    <string name="backup_err_entry">该备份包含恢复时不允许写入的文件：%1$s</string>
+    <string name="backup_err_too_large">该文件太大，无法用作备份</string>
+    <string name="backup_err_daemon">NetBird 未能停止，因此其文件未被改动</string>
+</resources>

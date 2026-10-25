@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="action_edit">编辑</string>
+    <string name="accounts_done">完成</string>
+    <string name="accounts_not_connected">未连接</string>
+    <string name="nb_accounts_sheet_help">每个账户都有自己的密钥、设置和会话；同一时间只有一个处于连接状态。切换会重新连接，你离开的账户仍保持登录。第一个账户无法重命名或删除，当前激活的账户也无法删除。</string>
+    <string name="nb_networks_off_title">网络已关闭</string>
+    <string name="nb_networks_off_desc">设置 → 账户中的 \"使用网络\" 已关闭：此设备无法访问对等节点所路由的任何网络和出口节点。</string>
+    <string name="nb_expose_inbound_in_settings">代理通过 NetBird 访问手机，因此必须允许对等节点访问其服务。请在设置中开启。</string>
+    <string name="main_cd_dashboard">打开仪表板</string>
+</resources>

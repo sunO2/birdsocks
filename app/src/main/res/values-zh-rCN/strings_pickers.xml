@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="perm_unknown_note">Android 不会告知应用此项是否被允许，请在系统界面上检查。</string>
+</resources>

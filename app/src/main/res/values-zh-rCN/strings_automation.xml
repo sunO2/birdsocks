@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings_cat_automation">自动化</string>
+    <string name="settings_cat_automation_desc">Tasker 和 adb、操作链接、令牌</string>
+
+    <string name="automation_title">自动化</string>
+    <string name="automation_enable">允许自动化</string>
+    <string name="automation_enable_desc">携带令牌的 Tasker、MacroDroid、adb 和链接可以启动、停止和切换 BirdSocks。关闭后：所有请求都会被拒绝。</string>
+    <string name="automation_token">令牌</string>
+    <string name="automation_token_clear">清除令牌</string>
+    <string name="automation_token_desc">每次广播都会在 secret extra 中携带它，带有 &amp;secret= 的链接会直接运行而不询问。谁拥有它谁就能控制 BirdSocks。</string>
+    <string name="automation_token_missing">没有至少 %1$d 个字符的令牌：所有请求都会被拒绝。请生成一个。</string>
+    <string name="automation_status_to">状态更新发送到 %1$s</string>
+    <string name="automation_status_stop">停止</string>
+    <string name="automation_docs">操作与示例</string>
+    <string name="automation_docs_desc">广播、链接、adb 命令</string>
+    <string name="automation_docs_url">https://github.com/bropines/birdsocks/blob/main/docs/AUTOMATION.md</string>
+
+    <string name="automation_failed">未完成：%1$s</string>
+    <string name="automation_start_refused">Android 不允许自动化在后台启动 BirdSocks。请在 设置 → 后台与权限 中将其从电池优化中排除。</string>
+
+    <string name="automation_link_connect">启动 BirdSocks 并连接？</string>
+    <string name="automation_link_disconnect">断开连接并停止 BirdSocks？</string>
+    <string name="automation_link_exit_node">通过出口节点 %1$s 发送互联网流量？</string>
+    <string name="automation_link_exit_none">停止使用出口节点？</string>
+    <string name="automation_link_account">切换到账户 %1$s？</string>
+    <string name="automation_link_tun_on">开启 VPN 模式？</string>
+    <string name="automation_link_tun_off">关闭 VPN 模式？</string>
+    <string name="automation_link_body">来自其他应用或网页的链接请求此操作。仅当您自己打开它时才允许。</string>
+    <string name="automation_link_allow">允许</string>
+    <string name="automation_link_invalid">此 BirdSocks 链接不完整或无效</string>
+
+    <string name="shortcut_toggle">开 / 关</string>
+    <string name="shortcut_toggle_long">开启或关闭 BirdSocks</string>
+</resources>
