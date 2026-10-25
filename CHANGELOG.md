@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.1] - 2026-10-25
+
+### Added
+- Simplified Chinese: every screen translated, chosen in Settings → Appearance & language.
+
+### Changed
+- This fork installs as its own package, `io.github.suno2.birdsocks`, and takes its updates from `sunO2/birdsocks`.
+
 ## [0.3.0] - 2026-10-22
 
 ### Added

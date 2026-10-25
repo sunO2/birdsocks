@@ -1,0 +1,2 @@
+Simplified Chinese: every screen translated, chosen in Settings → Appearance & language.
+This fork installs as its own package and takes its updates from sunO2/birdsocks.
