@@ -1,0 +1,52 @@
+name: Chinese coverage
+
+# Reports English strings that have no Chinese (zh-rCN) counterpart. It runs
+# once a day, after the upstream sync has had its turn, and on demand. Nothing
+# is translated here: it opens — or updates — a single issue listing what is
+# missing, and closes it again once zh-rCN is complete. The same list comes
+# from `python3 scripts/zh_missing.py` by hand.
+
+on:
+  schedule:
+    - cron: '30 4 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  coverage:
+    name: Missing zh-rCN strings
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Find the English keys zh-rCN lacks
+        run: python3 scripts/zh_missing.py > /tmp/report.md
+
+      - name: Open, update or close the issue
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TITLE="zh-rCN: missing translations"
+          number=$(gh issue list --state open --limit 200 --json number,title \
+            --jq '.[] | select(.title | startswith("zh-rCN")) | .number' | head -1)
+          if [ "$(cat /tmp/report.md)" = "OK" ]; then
+            if [ -n "$number" ]; then
+              gh issue close "$number" --comment "zh-rCN is complete again."
+            else
+              echo "zh-rCN is complete."
+            fi
+          elif [ -n "$number" ]; then
+            gh issue edit "$number" --body-file /tmp/report.md
+            echo "Updated issue #$number"
+          else
+            gh issue create --title "$TITLE" --body-file /tmp/report.md
+          fi
