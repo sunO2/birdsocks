@@ -205,7 +205,9 @@ jobs:
             test -s "$dev" || { echo "::error::$dev was not built"; exit 1; }
             cp "$dev" "dist/dev/$abi/BirdSocks-v$VERSION-$abi-$hash-dev.apk"
             certs=$("$apksigner" verify --print-certs "$dst")
-            got=$(sed -n 's/^Signer #1 certificate SHA-256 digest: //p' <<< "$certs")
+            # Build-tools 37 labels the signer "V2 Signer: certificate SHA-256
+            # digest: …"; older ones "Signer #1 certificate SHA-256 digest: …".
+            got=$(sed -n 's/.*certificate SHA-256 digest: //p' <<< "$certs" | head -1 | tr -d ': ' | tr 'A-F' 'a-f')
             if [ -n "$want" ] && [ "$got" != "$want" ]; then
               echo "::error::$dst is signed by $got, not RELEASE_CERT_SHA256 ($want)"
               exit 1
