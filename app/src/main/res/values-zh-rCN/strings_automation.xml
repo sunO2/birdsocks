@@ -14,7 +14,7 @@
     <string name="automation_status_stop">停止</string>
     <string name="automation_docs">操作与示例</string>
     <string name="automation_docs_desc">广播、链接、adb 命令</string>
-    <string name="automation_docs_url">https://github.com/bropines/birdsocks/blob/main/docs/AUTOMATION.md</string>
+    <string name="automation_docs_url">https://github.com/sunO2/birdsocks/blob/main/docs/AUTOMATION.md</string>
 
     <string name="automation_failed">未完成：%1$s</string>
     <string name="automation_start_refused">Android 不允许自动化在后台启动 BirdSocks。请在 设置 → 后台与权限 中将其从电池优化中排除。</string>

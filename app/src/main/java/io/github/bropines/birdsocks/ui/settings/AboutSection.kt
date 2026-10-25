@@ -62,7 +62,7 @@ internal fun AboutSection(env: SettingsEnv) {
         SettingsClickableItem(stringResource(R.string.nb_about_docs), "docs.netbird.io", Icons.AutoMirrored.Filled.MenuBook) {
             openUrl(context, "https://docs.netbird.io/")
         }
-        SettingsClickableItem(stringResource(R.string.nb_about_source), "github.com/bropines/birdsocks", Icons.Default.Code) {
+        SettingsClickableItem(stringResource(R.string.nb_about_source), "github.com/sunO2/birdsocks", Icons.Default.Code) {
             openUrl(context, Updater.REPO_URL)
         }
         SettingsClickableItem(stringResource(R.string.about_donate), "boosty.to/pinus", Icons.Default.Favorite) {

@@ -43,11 +43,11 @@ import java.util.concurrent.TimeUnit
  * not over it, so it is told a newer release exists and offered the page.
  */
 object Updater {
-    const val REPO_URL = "https://github.com/bropines/birdsocks"
+    const val REPO_URL = "https://github.com/sunO2/birdsocks"
     const val RELEASES_URL = "$REPO_URL/releases"
     /** Where the project takes donations (also .github/FUNDING.yml and the README). */
     const val DONATE_URL = "https://boosty.to/pinus"
-    private const val API_LATEST = "https://api.github.com/repos/bropines/birdsocks/releases/latest"
+    private const val API_LATEST = "https://api.github.com/repos/sunO2/birdsocks/releases/latest"
     private const val SUMS = "SHA256SUMS"
     private const val DIR = "updates"
 

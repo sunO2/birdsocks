@@ -102,7 +102,7 @@ jobs:
           # gomobile writes the absolute path of the module it binds into
           # libgojni.so, which -trimpath does not reach, and a reproducible
           # build has to match that path.
-          BUILD_DIR=/home/vagrant/build/io.github.bropines.birdsocks
+          BUILD_DIR=/home/vagrant/build/io.github.suno2.birdsocks
           sudo mkdir -p /home/vagrant/build
           sudo chown -R "$(id -u):$(id -g)" /home/vagrant
           cp -a "$GITHUB_WORKSPACE" "$BUILD_DIR"

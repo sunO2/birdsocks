@@ -20,7 +20,7 @@ import androidx.compose.ui.text.withStyle
  */
 object Changelog {
     const val ASSET_NAME = "CHANGELOG.md"
-    const val FULL_CHANGELOG_URL = "https://github.com/bropines/birdsocks/blob/main/CHANGELOG.md"
+    const val FULL_CHANGELOG_URL = "https://github.com/sunO2/birdsocks/blob/main/CHANGELOG.md"
 
     data class Item(val text: String, val level: Int)
     data class Group(val title: String, val items: List<Item>)

@@ -13,7 +13,7 @@
         android:shortcutLongLabel="@string/shortcut_toggle_long">
         <intent
             android:action="android.intent.action.VIEW"
-            android:targetPackage="io.github.bropines.birdsocks.dev"
+            android:targetPackage="io.github.suno2.birdsocks.dev"
             android:targetClass="io.github.bropines.birdsocks.ui.ToggleActivity" />
     </shortcut>
     <shortcut
@@ -23,11 +23,11 @@
         android:shortcutShortLabel="@string/nb_menu_peers">
         <intent
             android:action="android.intent.action.MAIN"
-            android:targetPackage="io.github.bropines.birdsocks.dev"
+            android:targetPackage="io.github.suno2.birdsocks.dev"
             android:targetClass="io.github.bropines.birdsocks.ui.MainActivity" />
         <intent
             android:action="android.intent.action.VIEW"
-            android:targetPackage="io.github.bropines.birdsocks.dev"
+            android:targetPackage="io.github.suno2.birdsocks.dev"
             android:targetClass="io.github.bropines.birdsocks.ui.PeersActivity" />
     </shortcut>
     <shortcut
@@ -37,11 +37,11 @@
         android:shortcutShortLabel="@string/nb_menu_dns">
         <intent
             android:action="android.intent.action.MAIN"
-            android:targetPackage="io.github.bropines.birdsocks.dev"
+            android:targetPackage="io.github.suno2.birdsocks.dev"
             android:targetClass="io.github.bropines.birdsocks.ui.MainActivity" />
         <intent
             android:action="android.intent.action.VIEW"
-            android:targetPackage="io.github.bropines.birdsocks.dev"
+            android:targetPackage="io.github.suno2.birdsocks.dev"
             android:targetClass="io.github.bropines.birdsocks.ui.DnsActivity" />
     </shortcut>
     <shortcut
@@ -51,11 +51,11 @@
         android:shortcutShortLabel="@string/nb_menu_diagnostics">
         <intent
             android:action="android.intent.action.MAIN"
-            android:targetPackage="io.github.bropines.birdsocks.dev"
+            android:targetPackage="io.github.suno2.birdsocks.dev"
             android:targetClass="io.github.bropines.birdsocks.ui.MainActivity" />
         <intent
             android:action="android.intent.action.VIEW"
-            android:targetPackage="io.github.bropines.birdsocks.dev"
+            android:targetPackage="io.github.suno2.birdsocks.dev"
             android:targetClass="io.github.bropines.birdsocks.ui.DiagnosticsActivity" />
     </shortcut>
 </shortcuts>

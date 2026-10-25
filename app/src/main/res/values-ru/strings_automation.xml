@@ -15,7 +15,7 @@
     <string name="automation_status_stop">Отключить</string>
     <string name="automation_docs">Действия и примеры</string>
     <string name="automation_docs_desc">Рассылки, ссылки, команды adb</string>
-    <string name="automation_docs_url">https://github.com/bropines/birdsocks/blob/main/docs/AUTOMATION_RU.md</string>
+    <string name="automation_docs_url">https://github.com/sunO2/birdsocks/blob/main/docs/AUTOMATION_RU.md</string>
 
     <string name="automation_failed">Не выполнено: %1$s</string>
     <string name="automation_start_refused">Android не дал автоматизации запустить BirdSocks в фоне. Отключите для него оптимизацию батареи: Настройки → Фоновая работа и разрешения.</string>

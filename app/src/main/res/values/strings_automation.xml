@@ -15,7 +15,7 @@
     <string name="automation_status_stop">Stop</string>
     <string name="automation_docs">Actions and examples</string>
     <string name="automation_docs_desc">Broadcasts, links, adb commands</string>
-    <string name="automation_docs_url">https://github.com/bropines/birdsocks/blob/main/docs/AUTOMATION.md</string>
+    <string name="automation_docs_url">https://github.com/sunO2/birdsocks/blob/main/docs/AUTOMATION.md</string>
 
     <string name="automation_failed">Not done: %1$s</string>
     <string name="automation_start_refused">Android did not let automation start BirdSocks in the background. Exempt it from battery optimization in Settings → Background &amp; permissions.</string>

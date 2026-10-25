@@ -89,7 +89,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "io.github.bropines.birdsocks"
+        applicationId = "io.github.suno2.birdsocks"
         minSdk = 24
         targetSdk = 35
         versionCode = appVersionCode

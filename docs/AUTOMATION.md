@@ -6,7 +6,7 @@ Turn on **Settings → Automation** and tap **Generate**. Until then, and withou
 
 ## Broadcasts: Tasker, MacroDroid, adb
 
-- **Receiver:** `io.github.bropines.birdsocks/io.github.bropines.birdsocks.core.AutomationReceiver`. The debug build's package is `io.github.bropines.birdsocks.dev`; the class and the actions stay the same.
+- **Receiver:** `io.github.suno2.birdsocks/io.github.bropines.birdsocks.core.AutomationReceiver`. The debug build's package is `io.github.suno2.birdsocks.dev`; the class and the actions stay the same.
 - **Token:** every intent carries it in the string extra `secret` (or `token`, `key`).
 - **Background:** on Android 12+ a broadcast can start BirdSocks only if battery optimization is off for it.
 
@@ -50,7 +50,7 @@ Extras:
 ## Examples
 
 ```bash
-R=io.github.bropines.birdsocks/io.github.bropines.birdsocks.core.AutomationReceiver
+R=io.github.suno2.birdsocks/io.github.bropines.birdsocks.core.AutomationReceiver
 A=io.github.bropines.birdsocks.action
 adb shell am broadcast -n $R -a $A.CONNECT --es secret TOKEN
 adb shell am broadcast -n $R -a $A.SET_EXIT_NODE --es secret TOKEN --es peer laptop

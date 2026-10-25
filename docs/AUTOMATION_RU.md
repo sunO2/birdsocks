@@ -6,7 +6,7 @@
 
 ## Рассылки: Tasker, MacroDroid, adb
 
-- **Получатель:** `io.github.bropines.birdsocks/io.github.bropines.birdsocks.core.AutomationReceiver`. У отладочной сборки пакет `io.github.bropines.birdsocks.dev`; класс и действия те же.
+- **Получатель:** `io.github.suno2.birdsocks/io.github.bropines.birdsocks.core.AutomationReceiver`. У отладочной сборки пакет `io.github.suno2.birdsocks.dev`; класс и действия те же.
 - **Токен:** каждый intent передаёт его в строковом extra `secret` (или `token`, `key`).
 - **Фон:** на Android 12+ рассылка может запустить BirdSocks, только если для него отключена оптимизация батареи.
 
@@ -50,7 +50,7 @@ Extras:
 ## Примеры
 
 ```bash
-R=io.github.bropines.birdsocks/io.github.bropines.birdsocks.core.AutomationReceiver
+R=io.github.suno2.birdsocks/io.github.bropines.birdsocks.core.AutomationReceiver
 A=io.github.bropines.birdsocks.action
 adb shell am broadcast -n $R -a $A.CONNECT --es secret ТОКЕН
 adb shell am broadcast -n $R -a $A.SET_EXIT_NODE --es secret ТОКЕН --es peer laptop
